@@ -1,15 +1,3 @@
-<script>
-    import { onMount } from 'svelte';
-
-    onMount(() => {
-        // Set the page metadata
-        document.title = "Project Jam"; // Change to your desired title
-        document
-            .querySelector('meta[name="description"]')
-            .setAttribute("content", "idk what to put here"); // Change to your desired description
-    });
-</script>
-
 <main>
     <img src="/logo.svg" alt="Logo" />
 </main>
