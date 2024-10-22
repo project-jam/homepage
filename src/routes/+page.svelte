@@ -32,7 +32,7 @@
     }
 
     img {
-        max-width: 76%; /* Responsive image */
+        max-width: 20%; /* Responsive image */
         height: auto;    /* Maintain aspect ratio */
     }
 </style>
