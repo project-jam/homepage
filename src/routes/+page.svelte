@@ -12,8 +12,8 @@
 
 <svelte:head>
   <title>{title}</title>
-  <meta name="description" content="{description} | Example.com">
-  <meta property="og:url" content="https://project-jam.vercel.app/{$page.url.pathname.toString()}">
+  <meta name="description" content="{description}">
+  <meta property="og:url" content="https://project-jam.js.cool/{$page.url.pathname.toString()}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
