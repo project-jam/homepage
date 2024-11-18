@@ -1,6 +1,5 @@
 // components/Navbar.tsx
 import Link from 'next/link'
-import { SVGProps } from 'react'
 import LogoIcon from './logo/LogoIcon'
 import MenuIcon from './icons/MenuIcon'
 import ArrowIcon from './icons/ArrowIcon'

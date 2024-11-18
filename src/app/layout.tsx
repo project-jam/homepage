@@ -1,6 +1,4 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import Image from 'next/image';
 
 export const metadata = {
   title: "Project Jam",

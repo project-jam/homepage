@@ -16,7 +16,7 @@ export default function NotFound() {
         <div>
           <h1 className="text-3xl text-orange-500">Not Found! Go find another page!</h1>
           <p className="text-lg mt-4 text-orange-500">
-            Sorry, the page you're looking for doesn't exist, maybe try to find another one? :)
+            Sorry, the page you&apos;re looking for doesn&apos;t exist, maybe try to find another one? :)
           </p>
 
           {/* Using the Button component */}
