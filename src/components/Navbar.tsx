@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 import Link from 'next/link'
 import LogoIcon from './logo/LogoIcon'
 import MenuIcon from './icons/MenuIcon'
@@ -12,7 +11,12 @@ const Navbar = () => {
         <div className="flex h-9 w-full items-center justify-between gap-0 md:justify-start">
           <Link href="/">
             <div className="mr-2 flex h-9 w-9 items-center justify-center rounded-xl bg-orange-500">
-              <div style={{ ease: 'easeOut', duration: '0.2px', type: 'tween', transform: 'none' }}>
+              <div
+                style={{
+                  transition: 'transform 0.2s ease-out',  // Correct way to define transition
+                  transform: 'none',  // Define the transform (initial state)
+                }}
+              >
                 <LogoIcon />
               </div>
             </div>

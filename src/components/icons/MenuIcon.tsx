@@ -1,4 +1,6 @@
 // components/MenuIcon.tsx
+import React, { SVGProps } from 'react';
+
 const MenuIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg width={16} height={16} viewBox="0 0 20 20" {...props}>
