@@ -5,8 +5,8 @@ export const metadata = {
   description: "idk what to put here",
   openGraph: {
     title: "Project Jam",
-    url: "https://project-jam.js.cool/",
-    images: "https://project-jam.js.cool/logo.png",
+    url: "https://project-jam.is-a.dev/",
+    images: "https://project-jam.is-a.dev/logo.png",
     siteName: "Project Jam",
   },
   twitter: {
