@@ -1,0 +1,135 @@
+/* Add animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-[#080604];
+        @apply text-[#fefefe];
+    }
+
+    /* Custom selection color */
+    ::selection {
+        @apply bg-[#de7f18];
+        @apply text-[#080604];
+    }
+}
+
+/* Animation classes */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Replace animate-border-pulse class */
+.animate-border-brightness {
+    animation: borderBrightness 3s infinite ease-in-out;
+}
+
+/* Staggered animations */
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+.stagger-4 {
+    animation-delay: 0.4s;
+}
+
+/* MDX Styling */
+@layer components {
+    .prose pre {
+        @apply bg-[#080604];
+        @apply rounded-md;
+        @apply p-4;
+        @apply overflow-x-auto;
+    }
+
+    .prose code {
+        @apply bg-[#080604];
+        @apply px-1 py-0.5;
+        @apply rounded;
+        @apply text-[#fefefe];
+    }
+
+    .prose img {
+        @apply rounded-md;
+    }
+
+    .prose a {
+        @apply text-[#de7f18];
+        @apply hover:underline;
+    }
+
+    .prose ul {
+        @apply list-disc;
+        @apply list-inside;
+    }
+
+    .prose ol {
+        @apply list-decimal;
+        @apply list-inside;
+    }
+
+    .prose blockquote {
+        @apply border-l-4;
+        @apply border-[#45311b];
+        @apply pl-4;
+        @apply italic;
+    }
+
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4 {
+        @apply text-[#de7f18];
+        @apply font-medium;
+    }
+}
