@@ -3,25 +3,18 @@ import "./globals.css";
 
 export const metadata = {
   title: "project jam",
-  description: "A chill website",
+  description: "a chill website",
   openGraph: {
     title: "project jam",
-    description: "A chill website",
+    description: "a chill website",
     images: [
       {
-        url: "/twitter_summary_image.png", // Make sure the image is in the public folder
+        url: "/icon.png", // Make sure the image is in the public folder
         width: 1200,
         height: 630,
-        alt: "Project Jam Logo",
+        alt: "project jam",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image", // Uses a large Twitter card format
-    site: "@your_twitter_handle", // Replace with your Twitter handle
-    title: "project jam",
-    description: "A chill website",
-    images: "/twitter_summary_image.png", // Path to the image
   },
 };
 
@@ -52,16 +45,8 @@ export default function RootLayout({
           property="og:image:alt"
           content={metadata.openGraph.images[0].alt}
         />
-
-        {/* Twitter Metadata */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta
-          name="twitter:description"
-          content={metadata.twitter.description}
-        />
-        <meta name="twitter:image" content={metadata.twitter.images} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#DE7F18" />
       </head>
       <body>{children}</body>
     </html>
