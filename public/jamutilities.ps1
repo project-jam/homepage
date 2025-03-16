@@ -1,9 +1,5 @@
-# Ensure BOM is added at the start of the script (UTF-8 with BOM)
-$utf8Bom = [System.Text.Encoding]::UTF8.GetPreamble()
-$fileContent = @"
-Write-Host "🎶 Welcome to the Project Jam, JamUtilities Interactive Installer! 🚀" -ForegroundColor Cyan
-Write-Host "------------------------------------------------------------"
-Write-Host "Let’s get you set up with everything you need. 😊"
+
+Write-Host "🎶 Welcome to the Project Jam, JamUtilities Interactive Installer! 🚀"
 Write-Host "------------------------------------------------------------"
 
 # Check if Node.js is installed
