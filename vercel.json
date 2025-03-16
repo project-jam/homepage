@@ -1,0 +1,17 @@
+{
+  "headers": [
+    {
+      "source": "/(.*\\.(sh|ps1))",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline"
+        }
+      ]
+    }
+  ]
+}
