@@ -1,5 +1,7 @@
-
-Write-Host "🎶 Welcome to the Project Jam, JamUtilities Interactive Installer! 🚀"
+# Ensure the script runs correctly without BOM or emojis
+Write-Host "Welcome to the Project Jam, JamUtilities Interactive Installer!" -ForegroundColor Cyan
+Write-Host "------------------------------------------------------------"
+Write-Host "Let’s get you set up with everything you need."
 Write-Host "------------------------------------------------------------"
 
 # Check if Node.js is installed
@@ -40,7 +42,7 @@ if ($bunInstalled) {
 
 Write-Host "Installation complete!" -ForegroundColor Green
 Write-Host "------------------------------------------------------------"
-Write-Host "Now, we’ll configure your environment... 🌱"
+Write-Host "Now, we’ll configure your environment..."
 Write-Host "------------------------------------------------------------"
 
 # Ask for environment variables
@@ -61,26 +63,15 @@ IGNORE_USER_IDS=$ignoreUserIds
 DISABLED_COMMANDS=$disabledCommands
 "@
 
-# Ensure the content gets saved with BOM
-$envFile = "$installPath\.env"
-[System.IO.File]::WriteAllBytes($envFile, $utf8Bom + [System.Text.Encoding]::UTF8.GetBytes($envContent))
+# Write the content to the .env file
+$filePath = "C:\Users\USER\project-jam-homepage\public\jamutilities.ps1"
+[System.IO.File]::WriteAllBytes($filePath, [System.Text.Encoding]::UTF8.GetBytes($envContent))
 
 Write-Host "Your .env file has been created!" -ForegroundColor Green
 Write-Host "------------------------------------------------------------"
-Write-Host "🎉 Installation complete! 🎉"
+Write-Host "Installation complete!"
 Write-Host "------------------------------------------------------------"
 Write-Host "Now, you need to restart the PowerShell shell for the changes to take effect."
 
 # Provide instructions to restart the shell
 Write-Host "To restart, simply close this PowerShell window and open a new one. Then, you can start the bot!"
-
-# Optional: Auto-close the script
-Start-Sleep -Seconds 3
-Exit
-"@
-
-# Write the content to a .ps1 file ensuring BOM is added
-$filePath = "C:\Users\USER\project-jam-homepage\public\jamutilities.ps1"
-[System.IO.File]::WriteAllBytes($filePath, $utf8Bom + [System.Text.Encoding]::UTF8.GetBytes($fileContent))
-
-Write-Host "jamutilities.ps1 has been written with BOM" -ForegroundColor Green
