@@ -1,4 +1,7 @@
-﻿Write-Host "🎶 Welcome to the Project Jam, JamUtilities Interactive Installer! 🚀" -ForegroundColor Cyan
+# Ensure BOM is added at the start of the script (UTF-8 with BOM)
+$utf8Bom = [System.Text.Encoding]::UTF8.GetPreamble()
+$fileContent = @"
+Write-Host "🎶 Welcome to the Project Jam, JamUtilities Interactive Installer! 🚀" -ForegroundColor Cyan
 Write-Host "------------------------------------------------------------"
 Write-Host "Let’s get you set up with everything you need. 😊"
 Write-Host "------------------------------------------------------------"
@@ -62,9 +65,9 @@ IGNORE_USER_IDS=$ignoreUserIds
 DISABLED_COMMANDS=$disabledCommands
 "@
 
-# Write to .env file
+# Ensure the content gets saved with BOM
 $envFile = "$installPath\.env"
-$envContent | Out-File -FilePath $envFile -Encoding UTF8
+[System.IO.File]::WriteAllBytes($envFile, $utf8Bom + [System.Text.Encoding]::UTF8.GetBytes($envContent))
 
 Write-Host "Your .env file has been created!" -ForegroundColor Green
 Write-Host "------------------------------------------------------------"
@@ -78,3 +81,10 @@ Write-Host "To restart, simply close this PowerShell window and open a new one. 
 # Optional: Auto-close the script
 Start-Sleep -Seconds 3
 Exit
+"@
+
+# Write the content to a .ps1 file ensuring BOM is added
+$filePath = "C:\Users\USER\project-jam-homepage\public\jamutilities.ps1"
+[System.IO.File]::WriteAllBytes($filePath, $utf8Bom + [System.Text.Encoding]::UTF8.GetBytes($fileContent))
+
+Write-Host "jamutilities.ps1 has been written with BOM" -ForegroundColor Green
