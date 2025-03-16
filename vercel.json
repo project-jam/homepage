@@ -1,7 +1,20 @@
 {
   "headers": [
     {
-      "source": "/.*\\.(sh|ps1)$",
+      "source": "/:path*.sh",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline"
+        }
+      ]
+    },
+    {
+      "source": "/:path*.ps1",
       "headers": [
         {
           "key": "Content-Type",
