@@ -20,7 +20,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#080604] px-4 py-6 md:py-8 flex items-center justify-center relative">
       <div className="w-full max-w-md mx-auto relative z-10">
         {/* Entire container with frosted acrylic effect */}
-        <div className="bg-[#080604] rounded-3xl shadow-sm border-2 border-dashed border-[#45311b] overflow-hidden animate-fade-in backdrop-blur-lg bg-white/5">
+        <div className="bg-[#080604] rounded-3xl shadow-sm border-dashed border-[#45311b] overflow-hidden animate-fade-in backdrop-blur-lg bg-white/5">
           {/* Header with logo and project name */}
           <div className="p-4 md:p-6 flex items-center justify-center">
             <img
@@ -294,7 +294,8 @@ function initThreeJS() {
           float lower = floor(noise * levels) / levels;
           float lowerDiff = noise - lower;
 
-          if (lowerDiff > 0.005) discard;
+          // Increased threshold for thicker topographic lines
+          if (lowerDiff > 0.02) discard;
 
           gl_FragColor = vec4(vec3(0.871, 0.498, 0.094), 1.0);
         }
@@ -337,3 +338,4 @@ function initThreeJS() {
     plane.geometry = newGeometry;
   });
 }
+
