@@ -67,12 +67,12 @@ export default function Home() {
                 </li>
                 <li className="animate-fade-in stagger-3">
                   <Link
-                    href="https://github.com/project-jam/homepage"
+                    href="https://github.com/project-jam/profane-detect"
                     className="text-[#fefefe] hover:text-[#de7f18] transition-colors"
                   >
-                    homepage
+                    profane-detect
                   </Link>{" "}
-                  - our simple website
+                  - a smart profanity filter w/ homoglygh and a long list of words using our algorithm >:)
                 </li>
               </ul>
               <h3 className="text-[#de7f18] font-medium mt-5 mb-2 md:text-lg">
@@ -99,7 +99,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-1.5">
               and use our <DiscordHover /> bot!
               <span className="ml-1 px-2 py-0.5 text-xs md:text-sm bg-[#de7f18] text-[#080604] rounded-full">
-                available now
+                beta
               </span>
             </div>
           </div>
@@ -338,4 +338,3 @@ function initThreeJS() {
     plane.geometry = newGeometry;
   });
 }
-
