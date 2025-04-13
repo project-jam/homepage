@@ -9,7 +9,7 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "attachement; filename=\"jamutilities.sh\""
+          "value": "inline"
         }
       ]
     },
