@@ -25,18 +25,14 @@ git clone https://github.com/project-jam/jamutilities $installPath
 # Change to the project directory
 Set-Location -Path $installPath
 
-# Check for Bun, pnpm, or fall back to npm
-$bunInstalled = Get-Command bun -ErrorAction SilentlyContinue
+# Check for pnpm or fall back to npm
 $pnpmInstalled = Get-Command pnpm -ErrorAction SilentlyContinue
 
-if ($bunInstalled) {
-    Write-Host "Bun is already installed. Using Bun for installation." -ForegroundColor Cyan
-    bun install
-} elseif ($pnpmInstalled) {
+if ($pnpmInstalled) {
     Write-Host "pnpm is already installed. Using pnpm for installation." -ForegroundColor Cyan
     pnpm install
 } else {
-    Write-Host "Neither Bun nor pnpm are installed. Using npm instead." -ForegroundColor Yellow
+    Write-Host "pnpm is not installed. Using npm instead." -ForegroundColor Yellow
     npm install
 }
 
@@ -75,3 +71,4 @@ Write-Host "Now, you need to restart the PowerShell shell for the changes to tak
 
 # Provide instructions to restart the shell
 Write-Host "To restart, simply close this PowerShell window and open a new one. Then, you can start the bot!"
+
